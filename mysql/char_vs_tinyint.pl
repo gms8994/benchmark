@@ -14,8 +14,8 @@ my $repeat = 300;
 my $runs = 5;
 
 my $dbh = DBI->connect("dbi:mysql:benchmark:localhost", "user", "password");
-$dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_ti (field_1 char(1), INDEX (field_1))");
-$dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_ci (field_1 tinyint(1), INDEX (field_1))");
+$dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_ti (field_1 tinyint(1), INDEX (field_1))");
+$dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_ci (field_1 char(1), INDEX (field_1))");
 $dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_ei (field_1 enum('y', 'n'), INDEX (field_1))");
 $dbh->do("CREATE TABLE IF NOT EXISTS ${table_name}_bi (field_1 boolean, INDEX (field_1))");
 
