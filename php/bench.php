@@ -13,7 +13,7 @@ function timeit($code, $times, $name = '') {
         $total_time += microtime(true) - $st;
     }
 
-    echo sprintf("%s: %d iterations took %.02f%s at %.03f%s\n", $name, $times, $total_time, "s", $times / $total_time, '/s');
+    echo sprintf("%s: %s iterations took %.02f%s at %.03f%s\n", $name, number_format($times, 0, '.', ','), $total_time, "s", $times / $total_time, '/s');
 }
 
 function cmp_these($codes, $times) {
@@ -31,6 +31,6 @@ function cmp_these($codes, $times) {
             $total_time += microtime(true) - $st;
         }
 
-        echo sprintf("%s: %d iterations took %.02f%s at %.03f%s\n", $name, $times, $total_time, "s", $times / $total_time, '/s');
+        echo sprintf("%s: %s iterations took %.02f%s at %.03f%s\n", $name, number_format($times, 0, '.', ','), $total_time, "s", $times / $total_time, '/s');
     }
 }

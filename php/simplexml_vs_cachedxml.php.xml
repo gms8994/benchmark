@@ -1,0 +1,63 @@
+<?xml version='1.0' standalone='yes'?>
+<page>
+ <name>Home Page</name>
+ <title>
+<sql>SELECT title from meta where site_id=[site_id] AND page_name="[_page_name]" LIMIT 1</sql>
+</title>
+ <keywords>
+<sql>SELECT keywords from meta where site_id=[site_id] AND page_name="[_page_name]" LIMIT 1</sql>
+</keywords>
+ <description>
+<sql>SELECT description from meta where site_id=[site_id] AND page_name="[_page_name]" LIMIT 1</sql>
+</description>
+ 
+ <user_state>none</user_state>
+ <inputs>
+  <input>
+   <name></name>
+   <type></type>
+  </input>
+ </inputs>
+ <layout>
+  <width>default</width>
+  <type>standalone</type>
+
+  <content>
+   <type>widget</type>
+   <name>header</name>
+  </content>
+
+  <content>
+   <type>widget</type>
+   <name>nav_menu</name>
+  </content>
+
+
+  <content>
+   <style>clear:both;float:left;margin-left:5px;</style>
+   <type>widget</type>
+   <name>left_column</name>
+  </content>
+
+  <content>
+   <style>float:left;margin-left:expression(10+'px');</style>
+   <type>widget</type>
+   <name>middle_column</name>
+  </content>
+
+  <content>
+   <style>float:left;margin-left:5px;margin-top:100px;</style>
+   <type>widget</type>
+   <name>right_column</name>
+  </content>
+
+
+
+  <content>
+   <style>clear:both;padding-top:25px;</style>
+   <type>widget</type>
+   <name>footer</name>
+  </content>
+
+ </layout>
+</page>
