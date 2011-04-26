@@ -7,7 +7,7 @@ cmp_these(
     array(
         'classer();',
         'includer();',
-    ), 10000
+    ), 5000
 );
 
 function classer() {
