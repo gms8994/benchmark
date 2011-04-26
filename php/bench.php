@@ -29,5 +29,5 @@ function run_code_block($code, $times, $name = '') {
 	}
 	ob_end_clean();
 
-	echo sprintf("%s: %s iterations took %.02f%s at %.03f%s\n", $name, number_format($times, 0, '.', ','), $total_time, "s", $times / $total_time, '/s');
+	echo sprintf("%s: %s iterations took %.06f%s at %.03f%s\n", $name, number_format($times, 0, '.', ','), $total_time, "s", $times / $total_time, '/s');
 }
